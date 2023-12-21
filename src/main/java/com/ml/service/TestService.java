@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface TestService {
     List<UserModel> selectUserList();
+
+    void insertUser(UserModel userModel);
 }

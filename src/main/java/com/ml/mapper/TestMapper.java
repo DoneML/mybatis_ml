@@ -8,4 +8,6 @@ import java.util.List;
 @Mapper
 public interface TestMapper {
     List<UserModel> selectUserList();
+
+    void insertUser(UserModel userModel);
 }

@@ -2,6 +2,7 @@ package com.ml.controller;
 
 import com.ml.domain.UserModel;
 import com.ml.service.TestService;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,5 +20,10 @@ public class TestController {
     public List<UserModel> test (){
         List<UserModel> userModels = testService.selectUserList();
         return userModels;
+    }
+
+    @RequestMapping("insertUser")
+    public void insertUser (@RequestBody UserModel userModel){
+        testService.insertUser(userModel);
     }
 }

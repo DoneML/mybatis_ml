@@ -18,4 +18,9 @@ public class TestServiceImpl implements TestService {
     public List<UserModel> selectUserList() {
         return testMapper.selectUserList();
     }
+
+    @Override
+    public void insertUser(UserModel userModel) {
+        testMapper.insertUser(userModel);
+    }
 }
