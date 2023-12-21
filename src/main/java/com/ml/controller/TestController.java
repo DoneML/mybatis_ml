@@ -15,8 +15,9 @@ public class TestController {
     @Resource
     private TestService testService;
 
-    @RequestMapping("test1")
+    @RequestMapping("selectUserList")
     public List<UserModel> test (){
-        return testService.selectUserList();
+        List<UserModel> userModels = testService.selectUserList();
+        return userModels;
     }
 }
