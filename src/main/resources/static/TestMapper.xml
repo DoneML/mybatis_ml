@@ -5,7 +5,7 @@
 
     <insert id="insertUser">
         insert into t_user (id,name,age,sex)
-            VALUE (#{id},#{name},#{age},#{sex})
+            VALUES (#{id},#{name},#{age},#{sex,javaType=com.ml.enums.SexEnum})
     </insert>
 
 
